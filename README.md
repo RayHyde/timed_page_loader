@@ -3,7 +3,7 @@ Show a timer bar before the next Ajax page load
 
 This plugin lets you automatically load page via Ajax and ideal for kiosk applications. The reader get visual feedback and clicking on the time bar stops and contionues the animation. There are even direct links that take the reader immediately to the next page if needed.
 
-See it in action: <a href="http://rayhyde.github.io/timed-page-loader/">http://rayhyde.github.io/timed-page-loader/</a>
+See it in action: <a href="http://rayhyde.github.io/timed_page_loader/">http://rayhyde.github.io/timed_page_loader/</a>
 
 <h2>The Goodies</h2>
 <ul>
@@ -95,5 +95,6 @@ See it in action: <a href="http://rayhyde.github.io/timed-page-loader/">http://r
 <p>You can specify if you want a horizontal or a vertical timer bar.</p>
 <code>direction: 'vertical'</code>
 
+<h3>Playground</h3>
 <p>This jQuery plugin is part of my Playground - a collection of fun stuff I made in the past, from jQuery games and plugins to CSS animation tests.</p>
 <p class="extra-padding"><a href="http://rayhyde.nl/pf_js-en.php">Drop in on my playground section at www.rayhyde.nl!</a></p>
