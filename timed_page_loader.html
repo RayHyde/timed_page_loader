@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>jQuery plugin: Timed Page Loader</title>
+	<meta name="author" content="Ray Hyde | www.rayhyde.nl">
+	<link rel="stylesheet" href="css/timed_page_loader.css">
+</head>
+
+<body>
+
+<h3>Example with a horizontal bar</h3>
+<div id="wrap1" class="page-wrap"></div>
+	
+<h3>Example with a vertical bar</h3>
+<div id="wrap2" class="page-wrap"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.timed-page-loader.min.js"></script>
+
+	<script>
+		$("#wrap1").timedPageLoader({
+			fuseTime: 10000, // the interval between page loads in thousands of a second
+			firstPage: 'page1.html', // which is the first page to load
+			direction: 'horizontal'
+		});
+		$("#wrap2").timedPageLoader({
+			fuseTime: 10000, // the interval between page loads in thousands of a second
+			firstPage: 'page1.html', // which is the first page to load
+			direction: 'vertical'
+		});
+	</script>
+</body>
+
+</html>

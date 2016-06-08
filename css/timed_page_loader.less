@@ -1,0 +1,107 @@
+.fuse-container {
+	background: slateblue;
+	border: 2px solid slateblue;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	transition: 0.3s all;
+	cursor: pointer;
+	position: relative;
+	.load-page {
+		position: absolute;
+		left: -200%;
+	}
+	&:hover {
+		border-color: red;
+		.glyphicon:before {
+			color: #fff;
+		}
+		
+	}
+	.fuse {
+		background: lighten(slateblue, 15%);
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.page-wrap {
+	position: relative;
+	height: 360px;
+	overflow: hidden;
+	&.vertical {
+		padding-right: 49px;
+		.fuse-container {
+			position: absolute;
+			width: 30px;
+			height: 100%;
+			top: 0;
+			right: 0;
+			.fuse {
+				bottom: 0;
+				position: absolute;
+			}
+
+			.glyphicon {
+				position: absolute;
+				bottom: 0;
+				top: auto;
+				width: 100%;
+				text-align: center;
+				&.glyphicon-play {
+					display: none;
+				}
+				&:before {
+					text-align: center;
+					width: 100%;
+					font-size: 20px;
+					line-height: 40px;
+					color: slateblue;
+					-webkit-transition: 0.3s all;
+					-o-transition: 0.3s all;
+					transition: 0.3s all;
+				}
+			}
+		
+		}
+	}
+	&.horizontal {
+		padding-bottom: 40px;
+	.fuse-container {
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		bottom: 0;
+		z-index: 2;
+		.fuse {
+			float: right;
+		}
+		.glyphicon {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 40px;
+			height: 100%;
+			text-align: center;
+			&.glyphicon-play {
+				display: none;
+			}
+			&:before {
+				text-align: center;
+				width: 100%;
+				font-size: 20px;
+				line-height: 30px;
+				color: slateblue;
+				-webkit-transition: 0.3s all;
+				-o-transition: 0.3s all;
+				transition: 0.3s all;
+			}
+		}
+	}
+	}
+	.page-new {
+		display: none;
+	}
+}

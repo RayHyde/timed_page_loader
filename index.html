@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>jQuery plugin: Timed Page Loader</title>
+	<meta name="description" content="Timed Page Loader - A jQuery plugin that shows a timer before the next Ajax page is loaded. Ideal for kiosk applications. The reader gets visual feedback and clicking on the time bar stops and continues the animation. There are even direct links that take the reader immediately to the next page if needed.">
+	<meta name="keywords" content="jquery, plugin, ajax, kiosk, reader, page load,start, stop">
+	<meta name="author" content="Ray Hyde | www.rayhyde.nl">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/timed_page_loader.css">
+	<link rel="stylesheet" href="css/timed_page_loader-page.css">
+	<link rel="stylesheet" href="../css/bootstrap-add.css">
+</head>
+
+<body>
+<div class="jumbotron">
+		<div class="container">			
+			<div class="row">
+				<div class="col-xs-12">					
+					<h1>Timed Page Loader</h1>
+					<h2>a jQuery plugin that shows a timer bar before the next Ajax page load</h2>
+					<p>Automatically load pages via Ajax. Ideal for kiosk applications. The reader gets visual feedback and clicking on the time bar stops and continues the animation. There are even direct links that take the reader immediately to the next page if needed.</p>
+					<p>
+						<a href="downloads/timed_page_loader.zip" class="btn btn-primary btn-lg">Download plugin (zip)</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<section class="copy">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Example with a horizontal bar</h3>
+					<div id="wrap1" class="page-wrap"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Example with a vertical bar</h3>
+					<div id="wrap2" class="page-wrap"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>The Goodies</h2>
+					<ul>
+						<li>You can start/stop the loading by clicking on the timer bar.</li>
+						<li>You can activate the plugin on as many elements on the page as you need, bar the processing limits of your viewer's computer, of course.</li>
+						<li>The plugin looks at a link in the loaded pages with the class name ".next-page" and uses that to load the next page in the background while still showing the first page. In these examples, the link works and loads the next page when clicked. You might also opt to hide it via CSS.</li>
+						<li>You can set the speed of the loading time and you have the choice of a vertical or a horizontal loading bar.</li>
+						<li>The loading bar you can style as you want - have it fixed on the side of the page, see-through, or even hidden.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>How to use this plugin</h2>
+					<h3>1. Link the files you need</h3>
+					<p>Include the jQuery script at the bottom of your page, e.g. through a CDN:</p>
+					<p><code>	&lt;script src="//code.jquery.com/jquery-2.1.3.min.js"&gt;&lt;/script&gt;</code></p>
+					<p>Then include the minimized version of the script:</p>
+					<p><code>&lt;script src="[path to your script]/jquery.timed-page-loader.min.js"&gt;&lt;/script&gt;</code></p>
+
+					<p>Change [path to your script] to where it resides, eg "js".</p>
+					<h3>2. Create your HTML markup</h3>
+					<p>This is very simple: create an element and style the element containing it. Like</p>
+					<pre>&lt;div id="wrap1" class="page-wrap"&gt;&lt;/div&gt;
+&lt;style&gt;
+  .page-wrap {
+    height: 360px;
+  }
+  .fuse-container {
+    background: slateblue;
+    ...
+  }
+  .fuse-container .fuse {
+    background: #9F95DF;
+    ...
+  }
+  ...
+&lt;/style&gt;
+			</pre>
+					<h3>3. Call the plugin</h3>
+					<p>Then initialize the plugin, telling it in which element it needs to run:</p>
+					<pre>
+&lt;script&gt;
+  $(&lt;containing element here, e.g. "#wrap1"&gt;).timedPageLoader({
+    fuseTime: 10000, 
+    firstPage: 'page1.html',
+    direction: 'vertical'
+  });
+
+  // a second container:
+  $(&lt;containing element here, e.g. "#wrap2"&gt;).timedPageLoader({
+    fuseTime: 12000, 
+    firstPage: 'newpage1.html',
+    direction: 'horizontal'
+  });
+&lt;/script&gt;
+	</pre>
+					<h3>4. Putting it all together</h3>
+					<p>This is your basic page to get the plugin up and running:</p>
+					<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+    &lt;link rel="stylesheet" href="css/mytime_pageloader.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  ...
+    &lt;div id="wrap1" class="page-wrap"&gt;&lt;/div&gt;
+    ...
+    &lt;script src="//code.jquery.com/jquery-2.1.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/jquery.timed_page_loader.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $('#wrap1').timedPageLoader();	
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+			</pre>
+					<h2>Options</h2>
+					<p>If you don't specify options, like in the example above, the plugin will use its default settings:
+						<br> - loading speed: 10000 in thousands of a second, so 10 seconds
+						<br> - the first page that gets loaded is 'page1.html'
+						<br> - a horizontal bar
+					</p>
+					<p>These are the options:</p>
+					<h3>Speed</h3>
+					<p>in the usual thousands of seconds</p>
+					<code>fuseTime: 10000</code>
+					<h3>First page to load</h3>
+					<p>The first page that needs to be loaded via Ajax:</p>
+					<code>firstPage: 'page1.html'</code>
+					<h3>Horizontal or vertical bar</h3>
+					<p>You can specify if you want a horizontal or a vertical timer bar.</p>
+					<code>direction: 'vertical'</code>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="row">
+				<div class="col-xs-12">
+					<p><a href="downloads/timed_page_loader.zip" class="btn btn-primary btn-lg download">Download plugin (zip)</a></p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div id="explain">
+				<p class="extra-padding">This jQuery plugin is part of my Playground - a collection of fun stuff I made in the past, from jQuery games and plugins to CSS animation tests.
+					<br>
+					<br><a href="http://rayhyde.nl/pf_js-en.php">Please drop in on the playground section of my portfolio site www.rayhyde.nl!</a></p>
+			</div>
+		</section>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.timed-page-loader.min.js"></script>
+
+	<script>
+		$("#wrap1").timedPageLoader({
+			fuseTime: 10000, // the interval between page loads in thousands of a second
+			firstPage: 'page1.html', // which is the first page to load
+			direction: 'horizontal'
+		});
+		$("#wrap2").timedPageLoader({
+			fuseTime: 10000, // the interval between page loads in thousands of a second
+			firstPage: 'page1.html', // which is the first page to load
+			direction: 'vertical'
+		});
+	</script>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-12332810-1");
+			pageTracker._trackPageview();
+		} catch (err) {}
+	</script>
+</body>
+
+</html>
