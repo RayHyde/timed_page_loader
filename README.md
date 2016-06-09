@@ -97,4 +97,4 @@ See it in action: <a href="http://rayhyde.github.io/timed_page_loader/">http://r
 
 <h3>Playground</h3>
 <p>This jQuery plugin is part of my Playground - a collection of fun stuff I made in the past, from jQuery games and plugins to CSS animation tests.</p>
-<p class="extra-padding"><a href="http://rayhyde.nl/pf_js-en.php">Drop in on my playground section at www.rayhyde.nl!</a></p>
+<p>Please drop in on my portfolio site at <a href="http://www.rayhyde.nl">www.rayhyde.nl!</a></p>
