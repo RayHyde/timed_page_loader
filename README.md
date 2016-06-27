@@ -1,9 +1,9 @@
-Timed Page Loader, a jQuery plugin
-Show a timer bar before the next Ajax page load
+<h1>Timed Page Loader, a jQuery plugin</h1>
+<h3>Show a timer bar before the next Ajax page load</h3>
 
-This plugin lets you automatically load page via Ajax and ideal for kiosk applications. The reader get visual feedback and clicking on the time bar stops and contionues the animation. There are even direct links that take the reader immediately to the next page if needed.
+<p>This plugin lets you automatically load pages via Ajax and is threfore ideal for kiosk applications. The reader gets visual feedback and clicking on the time bar stops and continues the animation. There are even direct links that take the reader immediately to the next page if needed.</p>
 
-See it in action: <a href="http://rayhyde.github.io/timed_page_loader/">http://rayhyde.github.io/timed_page_loader/</a>
+<p>See it in action: <a href="http://rayhyde.github.io/timed_page_loader/">http://rayhyde.github.io/timed_page_loader/</a></p>
 
 <h2>The Goodies</h2>
 <ul>
@@ -95,6 +95,8 @@ See it in action: <a href="http://rayhyde.github.io/timed_page_loader/">http://r
 <p>You can specify if you want a horizontal or a vertical timer bar.</p>
 <code>direction: 'vertical'</code>
 
-<h3>Playground</h3>
-<p>This jQuery plugin is part of my Playground - a collection of fun stuff I made in the past, from jQuery games and plugins to CSS animation tests.</p>
-<p>Please drop in on my portfolio site at <a href="http://www.rayhyde.nl">www.rayhyde.nl!</a></p>
+<h2>My Playground</h2>
+
+<p>This project is part of my Playground - a collection of fun (and <em>ahem</em>, dare I say it: clever) stuff I made in the past, from jQuery games and plugins to CSS animation tricks.</p>
+
+<p>Please drop in on my portfolio site <a href="http://www.rayhyde.nl">www.rayhyde.nl</a>!</p>
